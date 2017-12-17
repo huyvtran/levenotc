@@ -1,0 +1,98 @@
+<div class="navbar-header">
+  <div class="visible-xs  navbar-mobile">
+    <a href="javascript:;" class="navbar-more js-navbar-more">
+      <i class="es-icon es-icon-menu"></i>
+    </a>
+    <div class="html-mask"></div>
+    <div class="nav-mobile">
+      <form class="navbar-form" action="/app.php/search" method="get">
+        <div class="form-group">
+          <input class="form-control" placeholder="搜索" name="q">
+          <button class="button es-icon es-icon-search"></button>
+        </div>
+      </form>
+
+      <ul class="nav navbar-nav">
+
+        <li class="">
+          <a href="/app.php/teacher" >师资力量 </a>
+        </li>
+        <li class="">
+          <a href="/app.php/page/questions" >常见问题 </a>
+        </li>
+        <li class="">
+          <a href="/app.php/page/aboutus" >关于我们 </a>
+        </li>          </ul>
+    </div>
+  </div>
+  <a href="/app.php/" class="navbar-brand">
+    admin
+  </a>
+</div>
+<nav class="collapse navbar-collapse">
+  <ul class="nav navbar-nav clearfix hidden-xs " id="nav">
+
+    <li class="">
+      <a href="/app.php/teacher" >师资力量 </a>
+    </li>
+    <li class="">
+      <a href="/app.php/page/questions" >常见问题 </a>
+    </li>
+    <li class="">
+      <a href="/app.php/page/aboutus" >关于我们 </a>
+    </li>      </ul>
+  <div class="navbar-user ">
+    <ul class="nav user-nav">
+      <li class="user-avatar-li nav-hover">
+        <a href="javascript:;" class="dropdown-toggle">
+          <img class="avatar-xs" src="/assets/img/default/avatar.png">
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="presentation" class="dropdown-header">admin</li>
+          <li><a href="/app.php/user/1"><i class="es-icon es-icon-person"></i>个人主页</a></li>
+          <li><a href="/app.php/settings"><i class="es-icon es-icon-setting"></i>个人设置</a></li>
+          <li class="hidden-lg user-nav-li-my">
+            <a href="/app.php/my">
+              <i class="es-icon es-icon-eventnote"></i>我的教学              </a>
+          </li>
+          <li><a href="/app.php/my/orders"><i class="es-icon es-icon-accountwallet"></i>账户中心</a></li>
+
+          <li><a href="/app.php/admin/"><i class="es-icon es-icon-dashboard"></i>管理后台</a></li>
+
+          <li class="hidden-lg"><a href="/app.php/notification"><span class="pull-right num"></span><i class="es-icon es-icon-notificationson"></i>通知</a></li>
+          <li class="hidden-lg"><a href="/app.php/message/"><span class="pull-right num"></span><i class="es-icon es-icon-mail"></i>私信</a></li>
+          <li class="user-nav-li-logout"><a href="/app.php/logout"><i class="es-icon es-icon-power"></i>退出登录</a></li>
+        </ul>
+      </li>
+      <li class="visible-lg">
+        <a href="/app.php/my">
+          我的教学
+        </a>
+      </li>
+      <li class="visible-lg nav-hover">
+        <a><i class="es-icon es-icon-mail"></i></a>
+
+        <ul class="dropdown-menu" role="menu">
+          <li>
+            <a href="/app.php/notification">
+              <span class="pull-right num"></span>
+              <i class="es-icon es-icon-notificationson"></i>通知
+            </a>
+          </li>
+          <li>
+            <a href="/app.php/message/">
+              <span class="pull-right num"></span>
+              <i class="es-icon es-icon-mail"></i>私信
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <form class="navbar-form navbar-right hidden-xs hidden-sm" action="/app.php/search" method="get">
+      <div class="form-group">
+        <input class="form-control js-search" value="" name="q" placeholder="搜索">
+        <button class="button es-icon es-icon-search"></button>
+      </div>
+    </form>
+  </div>
+</nav>

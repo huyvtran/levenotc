@@ -1,0 +1,9 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{'user.settings.security_menu'|trans}} - {{ parent() }}{% endblock %}
+{% block content%}
+    {{ 'ABOUT'|trans }}
+asdfasf
+    {% do script([ 'app/js/index/index.js'], 1000) %}
+
+{% endblock %}

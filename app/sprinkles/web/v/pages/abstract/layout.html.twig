@@ -1,0 +1,122 @@
+{% extends "pages/abstract/base.html.twig" %}
+
+{% block stylesheets_page_group %}
+{% endblock %}
+
+{% block body_attributes %}
+    class="es-main-default es-nav-default cd-design"
+{% endblock %}
+
+{% block content %}
+
+<div class="es-wrap" id="app">
+
+  <header class="es-header navbar">
+    {% include "navigation/main-nav.html.twig" %}
+  </header>
+
+  <!-- Full Width Column -->
+  <div class="container cd-container">
+      <div class="cd-content">
+          <div class="cd-sidebar">
+              <ul class="cd-sidebar__list">
+                  <li class="cd-sidebar__heading">
+                      账户中心
+                  </li>
+                  <li class="cd-sidebar__item ">
+                      <a href="/app.php/my/orders">我的订单</a>
+                  </li>
+                  <li class="cd-sidebar__item ">
+                      <a href="/app.php/my/cards">优惠券</a>
+                  </li>
+
+                  <li class="cd-sidebar__heading">
+                      个人设置
+                  </li>
+                  <li class="cd-sidebar__item ">
+                      <a href="/app.php/settings">个人信息</a>
+                  </li>
+                  <li class="cd-sidebar__item ">
+                      <a href="/app.php/settings/approval/submit">实名认证</a>
+                  </li>
+                  <li class="cd-sidebar__item active">
+                      <a href="/app.php/settings/security">安全设置</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="cd-main">
+              <div class="cd-main__heading">
+                  <div class="cd-main__title">
+                      安全设置
+                  </div>
+              </div>
+              <div class="cd-main__body">
+                  <div class="cd-security cd-security-warning cd-mb32">
+    <span class="security-icon">
+      <i class="cd-icon cd-icon-warning"></i>
+    </span>
+                      <span class="security-title">安全等级</span>
+                      <span class="security-progress done"></span>
+                      <span class="security-progress done"></span>
+                      <span class="security-progress "></span>
+                      <span class="security-level">中</span>
+                  </div>
+
+                  <div class="cd-setting">
+                      <span class="setting-icon"><i class="cd-icon cd-icon-lock"></i></span>
+                      <span class="setting-title">登录密码</span>
+                      <span class="setting-content">经常更改密码有助于保护您的帐号安全</span>
+                      <span class="setting-action">
+              <span class="cd-setting-status cd-setting-status-done">已设置</span>
+        <button class="btn cd-btn cd-btn-default" data-url="/app.php/settings/password" data-toggle="modal" data-target="#modal">
+          修改
+        </button>
+          </span>
+                  </div>
+
+                  <div class="cd-setting">
+                      <span class="setting-icon"><i class="cd-icon cd-icon-payment"></i></span>
+                      <span class="setting-title">支付密码</span>
+                      <span class="setting-content">用于支付时的二次密码校验，加强账户安全性</span>
+                      <span class="setting-action">
+              <span class="cd-setting-status">未设置</span>
+        <button class="btn cd-btn cd-btn-default" data-url="/app.php/settings/pay_password" data-toggle="modal" data-target="#modal">设置</button>
+          </span>
+                  </div>
+
+                  <div class="cd-setting">
+                      <span class="setting-icon"><i class="cd-icon cd-icon-safe"></i></span>
+                      <span class="setting-title">安全问题</span>
+                      <span class="setting-content">设置安全问题，保护帐号密码安全，也可用于找回支付密码</span>
+                      <span class="setting-action">
+              <span class="cd-setting-status">未设置</span>
+        <button class="btn cd-btn cd-btn-default" data-url="/app.php/settings/security_questions" data-toggle="modal" data-target="#modal">设置</button>
+          </span>
+                  </div>
+
+
+                  <div class="cd-setting">
+                      <span class="setting-icon"><i class="cd-icon cd-icon-email"></i></span>
+                      <span class="setting-title">邮箱设置</span>
+                      <span class="setting-content">
+              已设置邮箱：a***@admin.com
+          </span>
+                      <span class="setting-action">
+                        <span class="cd-setting-status cd-setting-status-done">已验证</span>
+          <button class="btn cd-btn cd-btn-default" data-url="/app.php/settings/email" data-toggle="modal" data-target="#modal">修改</button>
+                  </span>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- /.content-wrapper -->
+
+  {% block footer %}
+    {% include "pages/partials/footer.html.twig" %}
+  {% endblock %}
+</div>
+<!-- ./wrapper -->
+
+{% endblock %}

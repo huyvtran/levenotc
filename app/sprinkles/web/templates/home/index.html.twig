@@ -1,0 +1,41 @@
+    {% extends "pages/abstract/default.html.twig" %}
+
+{% set page_active = "home" %}
+
+{# Overrides blocks in head of base template #}
+{% block page_title %}{{translate("HOME")}}{% endblock %}
+
+{% block page_description %}{{translate("WELCOME_TO", {'title': site.title})}}{% endblock %}
+
+{% block body_matter %}
+
+adfdfasdf
+    <input type="hidden" name="{{site.csrf.keys.name}}" value="{{site.csrf.name}}">
+    {% set coins = data('coins', {})|json_encode(constant('JSON_PRETTY_PRINT')) | raw %}
+
+
+
+   <template>
+    <div>
+    <el-container>
+            adfafd
+    </el-container>
+</div>
+</template>
+{% endblock %}
+
+
+
+{% block scripts_page %}
+    <!-- Script to Activate the Carousel -->
+    <script>
+       var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+
+
+    </script>
+{% endblock %}

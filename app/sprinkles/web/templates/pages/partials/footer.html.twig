@@ -1,0 +1,26 @@
+
+
+<footer class="es-footer">
+    <div class="  hidden-xs">
+
+
+    </div>
+    <div class="copyright">
+        <div class="container">
+            {% include "pages/partials/powered-by.html.twig" %}
+            <a href="{{site.uri.public}}/legal">{{ translate("TOS") }}</a> &middot;
+            <a href="{{site.uri.public}}/privacy">{{ translate("PRIVACY") }}</a>
+            {{ setting('site.analytics')|raw }}
+             <div class="mts">
+                {% if setting('site.copyright') %}
+                    {{ 'homepage.footer.course_copyright'|trans({'%copyRightUrl%':setting('site.copyright')})|raw }}
+                {% endif %}
+                {% if setting('site.icp') %}
+                    <a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">
+                        {{ setting('site.icp') }}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</footer>

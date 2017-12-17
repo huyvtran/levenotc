@@ -1,0 +1,5 @@
+{
+  "build/js/common.js": "/build/./app/bundle/js/common.js",
+  "build/manifest.js": "/build/./app/bundle/manifest.js",
+  "build/vue.js": "/build/./app/bundle/vue.js"
+}
