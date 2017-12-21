@@ -115,7 +115,7 @@ class ServicesProvider
 
             // Load asset schema
             if ($config['assets.use_raw']) {
-                $baseUrl = $config['site.uri.public'] . '/index.php/' . $config['assets.raw.path'];
+                $baseUrl = $config['site.uri.public'] . '/' . $config['assets.raw.path'];
                 $removePrefix = \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME;
                 $aub = new AssetUrlBuilder($locator, $baseUrl, $removePrefix, 'assets');
 
@@ -410,7 +410,7 @@ class ServicesProvider
             // Load the base locale file(s) as specified in the configuration
             $locales = explode(',', $config['site.locales.default']);
 
-             return new LocalePathBuilder($c->locator, 'locale://', $locales);
+            return new LocalePathBuilder($c->locator, 'locale://', $locales);
         };
 
         /**

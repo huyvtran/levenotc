@@ -52,7 +52,7 @@
             ],
             'registration' => [
                 'enabled' => true,
-                'captcha' => false,
+                'captcha' => true,
                 'require_email_verification' => true,
                 'user_defaults' => [
                     'locale' => 'en_US',

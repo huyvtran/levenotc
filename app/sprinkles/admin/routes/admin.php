@@ -9,9 +9,9 @@
 /**
  * Routes for administrative panel management.
  */
-$app->group('/admin', function () {
+$app->group('/dashboard', function () {
     $this->get('', 'UserFrosting\Sprinkle\Admin\Controller\AdminController:pageDashboard')
-         ->setName('admin');
+         ->setName('dashboard');
 })->add('authGuard');
 
 $app->group('/api/dashboard', function () {

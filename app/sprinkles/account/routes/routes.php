@@ -24,7 +24,7 @@ $app->group('/account', function () {
     $this->get('/set-password/deny', 'UserFrosting\Sprinkle\Account\Controller\AccountController:denyResetPassword');
 
     $this->get('/register', 'UserFrosting\Sprinkle\Account\Controller\AccountController:pageRegister')
-        //->add('checkEnvironment')
+        ->add('checkEnvironment')
         ->setName('register');
 
     $this->get('/settings', 'UserFrosting\Sprinkle\Account\Controller\AccountController:pageSettings')

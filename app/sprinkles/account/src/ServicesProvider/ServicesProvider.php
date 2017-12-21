@@ -353,7 +353,7 @@ class ServicesProvider
              * @return \Psr\Http\Message\ResponseInterface
              */
             return function (Request $request, Response $response, array $args) use ($c) {
-                $redirect = $c->router->pathFor('index');
+                $redirect = $c->router->pathFor('dashboard');
         
                 return $response->withRedirect($redirect, 302);
             };

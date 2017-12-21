@@ -416,7 +416,6 @@ class AccountController extends SimpleController
         /** @var UserFrosting\Config\Config $config */
         $config = $this->ci->config;
 
-
         if (!$config['site.registration.enabled']) {
             throw new NotFoundException($request, $response);
         }
@@ -433,8 +432,6 @@ class AccountController extends SimpleController
 
         // Load validation rules
         $schema = new RequestSchema('schema://requests/register.yaml');
-
-
         $validatorRegister = new JqueryValidationAdapter($schema, $this->ci->translator);
 
         return $this->ci->view->render($response, 'pages/register.html.twig', [
@@ -812,8 +809,6 @@ class AccountController extends SimpleController
 
         // Hash password
         $data['password'] = Password::hash($data['password']);
-        $data['first_name'] = '';
-        $data['last_name'] = '';
 
         // All checks passed!  log events/activities, create user, and send verification email (if required)
         // Begin transaction - DB will be rolled back if an exception occurs

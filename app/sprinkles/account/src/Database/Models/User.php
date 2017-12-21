@@ -13,8 +13,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use UserFrosting\Sprinkle\Account\Facades\Password;
 use UserFrosting\Sprinkle\Core\Database\Models\Model;
 use UserFrosting\Sprinkle\Core\Facades\Debug;
-use UserFrosting\Sprinkle\Web\Database\Models\Address;
-use UserFrosting\Sprinkle\Web\Database\Models\UserBalance;
 
 /**
  * User Class
@@ -491,17 +489,5 @@ class User extends Model
         }
 
         return $cachedPermissions;
-    }
-
-
-
-    public function addresss()
-    {
-        return $this->hasMany(Address::class)->orderBy('created_at', 'desc');
-    }
-
-    public function balances()
-    {
-        return $this->hasMany(UserBalance::class)->orderBy('created_at', 'asc');
     }
 }

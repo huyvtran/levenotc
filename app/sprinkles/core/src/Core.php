@@ -102,7 +102,7 @@ class Core extends Sprinkle
         $method = strtoupper($method);
 
         $csrfBlacklist = $this->ci->config['csrf.blacklist'];
-        $isBlacklisted = true;
+        $isBlacklisted = false;
 
         // Go through the blacklist and determine if the path and method match any of the blacklist entries.
         foreach ($csrfBlacklist as $pattern => $methods) {

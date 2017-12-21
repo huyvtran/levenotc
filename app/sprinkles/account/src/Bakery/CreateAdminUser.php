@@ -277,7 +277,7 @@ class CreateAdminUser extends BaseCommand
     protected function askPassword()
     {
         while (!isset($password) || !$this->validatePassword($password) || !$this->confirmPassword($password)) {
-            $password = $this->io->askHidden("Enter password (6-255 characters)");
+            $password = $this->io->askHidden("Enter password (12-255 characters)");
         }
         return $password;
     }
@@ -291,7 +291,7 @@ class CreateAdminUser extends BaseCommand
      */
     protected function validatePassword($password)
     {
-        if (strlen($password) < 6 || strlen($password) > 255) {
+        if (strlen($password) < 12 || strlen($password) > 255) {
             $this->io->error("Password must be between 12-255 characters");
             return false;
         }

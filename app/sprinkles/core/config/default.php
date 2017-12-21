@@ -54,7 +54,6 @@
             'persistent_token' => true,
             // A list of url paths to ignore CSRF checks on
             'blacklist' => [
-                'register'
                 // URL paths will be matched against each regular expression in this list.
                 // Each regular expression should map to an array of methods.
                 // Regular expressions will be delimited with ~ in preg_match, so if you

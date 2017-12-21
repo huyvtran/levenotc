@@ -83,7 +83,6 @@ class CoreController extends SimpleController
 
         $assetLoader = $this->ci->assetLoader;
 
-
         if (!$assetLoader->loadAsset($args['url'])) {
             throw new NotFoundException($request, $response);
         }

@@ -22,18 +22,32 @@
 
         <form id="register" role="form" action="{{site.uri.public}}/account/register" method="post" class="r-form">
             {% include "forms/csrf.html.twig" %}
-            <div class="form-group">
-                <label for="r-form-username">{{translate('USERNAME')}}</label>
-                <input type="text" name="user_name" placeholder="{{translate('USERNAME.CHOOSE')}}" class="form-control" id="r-form-username" autocomplete="off">
+            <label for="r-form-first-name">{{translate('NAME_AND_EMAIL')}}</label>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="sr-only" for="r-form-first-name">{{translate('FIRST_NAME')}}</label>
+                        <input type="text" name="first_name" placeholder="{{translate('FIRST_NAME')}}" class="form-control" id="r-form-first-name" autocomplete="off">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="sr-only" for="r-form-last-name">{{translate('LAST_NAME')}}</label>
+                        <input type="text" name="last_name" placeholder="{{translate('LAST_NAME')}}" class="form-control" id="r-form-last-name" autocomplete="off">
+                    </div>
+                </div>
             </div>
-            <label for="r-form-first-name">{{translate('EMAIL')}}</label>
             <div class="form-group">
                 <input type="text" name="email" placeholder="{% if site.registration.require_email_verification %}{{translate('EMAIL.VERIFICATION_REQUIRED')}}{% else %}{{translate('EMAIL.YOUR')}}{% endif %}" class="form-control" id="r-form-email">
             </div>
-
+            <div class="form-group">
+                <label for="r-form-username">{{translate('USERNAME')}}</label>
+                <span class="pull-right"><a href="#" id="form-register-username-suggest">[{{translate('SUGGEST')}}]</a></span>
+                <input type="text" name="user_name" placeholder="{{translate('USERNAME.CHOOSE')}}" class="form-control" id="r-form-username" autocomplete="off">
+            </div>
             <div class="form-group">
                 <label for="r-form-password">{{translate('PASSWORD')}}</label>
-                <input type="password" name="password" placeholder="{{translate('PASSWORD.BETWEEN', {min: 6, max: 100})}}" class="form-control" id="r-form-password">
+                <input type="password" name="password" placeholder="{{translate('PASSWORD.BETWEEN', {min: 12, max: 100})}}" class="form-control" id="r-form-password">
             </div>
             <div class="form-group">
                 <label class="sr-only" for="r-form-passwordc">{{translate('PASSWORD.CONFIRM')}}</label>
