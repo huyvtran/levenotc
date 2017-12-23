@@ -322,7 +322,7 @@ class ServicesProvider
         $container['debugLogger'] = function ($c) {
             $logger = new Logger('debug');
 
-            $logFile = $c->locator->findResource('log://userfrosting.log', true, true);
+            $logFile = $c->locator->findResource('log://debug.'.date("Y-m-d") .'.log', true, true);
 
             $handler = new StreamHandler($logFile);
 
@@ -362,7 +362,7 @@ class ServicesProvider
         $container['errorLogger'] = function ($c) {
             $log = new Logger('errors');
 
-            $logFile = $c->locator->findResource('log://userfrosting.log', true, true);
+            $logFile = $c->locator->findResource('log://error.'.date("Y-m-d") .'.log', true, true);
 
             $handler = new StreamHandler($logFile, Logger::WARNING);
 
@@ -436,7 +436,7 @@ class ServicesProvider
         $container['mailLogger'] = function ($c) {
             $log = new Logger('mail');
 
-            $logFile = $c->locator->findResource('log://userfrosting.log', true, true);
+            $logFile = $c->locator->findResource('log://mail.'.date("Y-m-d") .'.log', true, true);
 
             $handler = new StreamHandler($logFile);
             $formatter = new LineFormatter(null, null, true);
@@ -475,7 +475,7 @@ class ServicesProvider
         $container['queryLogger'] = function ($c) {
             $logger = new Logger('query');
 
-            $logFile = $c->locator->findResource('log://userfrosting.log', true, true);
+            $logFile = $c->locator->findResource('log://query.'.date("Y-m-d") .'.log', true, true);
 
             $handler = new StreamHandler($logFile);
 

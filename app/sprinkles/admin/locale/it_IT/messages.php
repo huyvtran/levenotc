@@ -33,12 +33,12 @@ return [
     "DASHBOARD"             => "Pannello di Controllo",
     "NO_FEATURES_YET"       => "Non sembra che alcune funzioni siano state create per questo account ... ancora. Forse non sono ancora state implementate, o forse qualcuno ha dimenticato di dare accesso. In entrambi i casi, siamo contenti di averti qui!",
     "DELETE_MASTER"         => "Non puoi eliminare l'account principale!",
-    "DELETION_SUCCESSFUL"   => "Hai eliminato utente <strong>{{user_name}}</strong>.",
-    "DETAILS_UPDATED"       => "Dettagli degli account aggiornati per l'utente <strong>{{user_name}}</strong>",
+    "DELETION_SUCCESSFUL"   => "Hai eliminato utente <strong>{{username}}</strong>.",
+    "DETAILS_UPDATED"       => "Dettagli degli account aggiornati per l'utente <strong>{{username}}</strong>",
     "DISABLE_MASTER"        => "Non puoi disattivare l'account principale!",
     "DISABLE_SELF"          => "Non puoi disattivare il tuo account!",
-    "DISABLE_SUCCESSFUL"    => "Account per l'utente <strong>{{user_name}}</strong> disattivato con successo!",
-    "ENABLE_SUCCESSFUL"     => "Account per l'utente <strong>{{user_name}}</strong> attivato con successo.",
+    "DISABLE_SUCCESSFUL"    => "Account per l'utente <strong>{{username}}</strong> disattivato con successo!",
+    "ENABLE_SUCCESSFUL"     => "Account per l'utente <strong>{{username}}</strong> attivato con successo.",
 
     "GROUP" => [
         1 => "Gruppo",
@@ -64,7 +64,7 @@ return [
         "UPDATE"        => "Dettagli aggiornati per il gruppo <strong>{{name}}</strong>."
     ],
 
-    "MANUALLY_ACTIVATED"    => "<strong>{{user_name}}</strong> è stato attivato manualmente",
+    "MANUALLY_ACTIVATED"    => "<strong>{{username}}</strong> è stato attivato manualmente",
     "MASTER_ACCOUNT_EXISTS" => "L'account primario esiste già!",
     "MIGRATION" => [
         "REQUIRED"          => "È necessario aggiornare il database"
@@ -138,7 +138,7 @@ return [
 
         "ACTIVATE"          => "Attiva l'utente",
         "CREATE"            => "Creare un utente",
-        "CREATED"           => "Account per l'utente <strong>{{user_name}}</strong> è stato creato.",
+        "CREATED"           => "Account per l'utente <strong>{{username}}</strong> è stato creato.",
         "DELETE"            => "Elimina utente",
         "DELETE_CONFIRM"    => "Sei sicuro di voler eliminare l'utente <strong>{{name}}</strong>?",
         "DELETE_YES"        => "Sì, elimina l'utente",

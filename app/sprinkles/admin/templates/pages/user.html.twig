@@ -8,7 +8,7 @@
 {# Overrides blocks in head of base template #}
 {% block page_title %}{{ translate("USER", 2)}} | {{user.full_name}}{% endblock %}
 
-{% block page_description %}{{ translate("USER.INFO_PAGE", {name: user.user_name}) }}{% endblock %}
+{% block page_description %}{{ translate("USER.INFO_PAGE", {name: user.username}) }}{% endblock %}
 
 {% block body_matter %}
     {% block group_box %}
@@ -29,27 +29,27 @@
                                         <ul class="dropdown-menu box-tool-menu">
                                             {% block tools %}
                                                 <li>
-                                                    <a href="#" class="js-user-edit" data-user_name="{{user.user_name}}">
+                                                    <a href="#" class="js-user-edit" data-username="{{user.username}}">
                                                         <i class="fa fa-edit fa-fw"></i> {{translate('EDIT')}}
                                                     </a>
                                                 </li>
                                                 {% if 'password' not in tools.hidden %}
                                                     <li>
-                                                        <a href="#" class="js-user-password" data-user_name="{{user.user_name}}">
+                                                        <a href="#" class="js-user-password" data-username="{{user.username}}">
                                                             <i class="fa fa-lock fa-fw"></i> {{translate('PASSWORD')}}
                                                         </a>
                                                     </li>
                                                 {% endif %}
                                                 {% if 'roles' not in tools.hidden %}
                                                     <li>
-                                                        <a href="#" class="js-user-roles" data-user_name="{{user.user_name}}">
+                                                        <a href="#" class="js-user-roles" data-username="{{user.username}}">
                                                             <i class="fa fa-drivers-license fa-fw"></i> {{translate('ROLE', 2)}}
                                                         </a>
                                                     </li>
                                                 {% endif %}
                                                 {% if 'activate' not in tools.hidden and user.flag_verified == "0" %}
                                                     <li>
-                                                        <a href="#" class="js-user-activate" data-user_name="{{user.user_name}}">
+                                                        <a href="#" class="js-user-activate" data-username="{{user.username}}">
                                                             <i class="fa fa-bolt fa-fw"></i> {{translate('ACTIVATE')}}
                                                         </a>
                                                     </li>
@@ -57,13 +57,13 @@
                                                 {% if 'enable' not in tools.hidden %}
                                                     {% if user.flag_enabled == "1" %}
                                                         <li>
-                                                            <a href="#" class="js-user-disable" data-user_name="{{user.user_name}}">
+                                                            <a href="#" class="js-user-disable" data-username="{{user.username}}">
                                                                 <i class="fa fa-minus-circle fa-fw"></i> {{translate('DISABLE')}}
                                                             </a>
                                                         </li>
                                                     {% else %}
                                                         <li>
-                                                            <a href="#" class="js-user-enable" data-user_name="{{user.user_name}}">
+                                                            <a href="#" class="js-user-enable" data-username="{{user.username}}">
                                                                 <i class="fa fa-plus-circle fa-fw"></i> {{translate('ENABLE')}}
                                                             </a>
                                                         </li>
@@ -71,7 +71,7 @@
                                                 {% endif %}
                                                 {% if 'delete' not in tools.hidden %}
                                                     <li>
-                                                        <a href="#" class="js-user-delete" data-user_name="{{user.user_name}}">
+                                                        <a href="#" class="js-user-delete" data-username="{{user.username}}">
                                                             <i class="fa fa-trash-o fa-fw"></i> {{translate('DELETE')}}
                                                         </a>
                                                     </li>
@@ -83,7 +83,7 @@
                             {% endif %}
                         </div>
                         <div class="box-body box-profile">
-                            <img class="profile-user-img img-responsive img-circle" src="{{user.avatar}}" alt="{{user.user_name}}">
+                            <img class="profile-user-img img-responsive img-circle" src="{{user.avatar}}" alt="{{user.username}}">
 
                             <h3 class="profile-username text-center">{{user.full_name}}</h3>
                             <div class="text-center">
@@ -94,7 +94,7 @@
                                     <i class="fa fa-fw fa-bolt fa-lg text-yellow" title="{{translate('UNACTIVATED')}}"></i>
                                 {% endif %}
                             </div>
-                            <h4 class="text-muted text-center">{{user.user_name}}{% if 'group' not in fields.hidden %} • {{user.group.name}}{% endif %}</h4>
+                            <h4 class="text-muted text-center">{{user.username}}{% if 'group' not in fields.hidden %} • {{user.group.name}}{% endif %}</h4>
 
                             {% if 'email' not in fields.hidden %}
                                 <hr>
@@ -181,7 +181,7 @@
     page = $.extend(
         true,               // deep extend
         {
-            "user_name": "{{user.user_name}}"
+            "username": "{{user.username}}"
         },
         page
     );

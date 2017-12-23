@@ -136,7 +136,7 @@ function updateUser(userName, fieldName, fieldValue) {
         $("body").ufModal({
             sourceUrl: site.uri.public + "/modals/users/edit",
             ajaxParams: {
-                user_name: $(this).data('user_name')
+                username: $(this).data('username')
             },
             msgTarget: $("#alerts-page")
         });
@@ -146,11 +146,11 @@ function updateUser(userName, fieldName, fieldValue) {
 
     // Manage user roles button
     el.find('.js-user-roles').click(function() {
-        var userName = $(this).data('user_name');
+        var userName = $(this).data('username');
         $("body").ufModal({
             sourceUrl: site.uri.public + "/modals/users/roles",
             ajaxParams: {
-                user_name: userName
+                username: userName
             },
             msgTarget: $("#alerts-page")
         });
@@ -192,11 +192,11 @@ function updateUser(userName, fieldName, fieldValue) {
 
     // Change user password button
     el.find('.js-user-password').click(function() {
-        var userName = $(this).data('user_name');
+        var userName = $(this).data('username');
         $("body").ufModal({
             sourceUrl: site.uri.public + "/modals/users/password",
             ajaxParams: {
-                user_name: userName
+                username: userName
             },
             msgTarget: $("#alerts-page")
         });
@@ -228,7 +228,7 @@ function updateUser(userName, fieldName, fieldValue) {
         $("body").ufModal({
             sourceUrl: site.uri.public + "/modals/users/confirm-delete",
             ajaxParams: {
-                user_name: $(this).data('user_name')
+                username: $(this).data('username')
             },
             msgTarget: $("#alerts-page")
         });
@@ -250,17 +250,17 @@ function updateUser(userName, fieldName, fieldValue) {
      */
     el.find('.js-user-activate').click(function() {
         var btn = $(this);
-        updateUser(btn.data('user_name'), 'flag_verified', '1');
+        updateUser(btn.data('username'), 'flag_verified', '1');
     });
 
     el.find('.js-user-enable').click(function () {
         var btn = $(this);
-        updateUser(btn.data('user_name'), 'flag_enabled', '1');
+        updateUser(btn.data('username'), 'flag_enabled', '1');
     });
 
     el.find('.js-user-disable').click(function () {
         var btn = $(this);
-        updateUser(btn.data('user_name'), 'flag_enabled', '0');
+        updateUser(btn.data('username'), 'flag_enabled', '0');
     });
 }
 

@@ -21,7 +21,7 @@ use UserFrosting\Sprinkle\Core\Facades\Debug;
  *
  * @author Alex Weissman (https://alexanderweissman.com)
  * @property int id
- * @property string user_name
+ * @property string username
  * @property string first_name
  * @property string last_name
  * @property string email
@@ -53,7 +53,7 @@ class User extends Model
      * @var string[]
      */
     protected $fillable = [
-        'user_name',
+        'username',
         'first_name',
         'last_name',
         'email',
@@ -202,7 +202,7 @@ class User extends Model
      * @param bool $checkDeleted set to true to include soft-deleted records
      * @return User|null
      */
-    public static function exists($value, $identifier = 'user_name', $checkDeleted = true)
+    public static function exists($value, $identifier = 'username', $checkDeleted = true)
     {
         return static::findUnique($value, $identifier, $checkDeleted);
     }
@@ -351,7 +351,7 @@ class User extends Model
     public function onLogin($params = [])
     {
         // Add a sign in activity (time is automatically set by database)
-        static::$ci->userActivityLogger->info("User {$this->user_name} signed in.", [
+        static::$ci->userActivityLogger->info("User {$this->username} signed in.", [
             'type' => 'sign_in'
         ]);
 
@@ -388,7 +388,7 @@ class User extends Model
      */
     public function onLogout($params = [])
     {
-        static::$ci->userActivityLogger->info("User {$this->user_name} signed out.", [
+        static::$ci->userActivityLogger->info("User {$this->username} signed out.", [
             'type' => 'sign_out'
         ]);
 

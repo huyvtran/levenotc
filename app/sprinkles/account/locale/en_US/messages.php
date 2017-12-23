@@ -171,8 +171,8 @@ return [
 
         "CHOOSE"        => "Choose a unique username",
         "INVALID"       => "Invalid username",
-        "IN_USE"        => "Username <strong>{{user_name}}</strong> is already in use.",
-        "NOT_AVAILABLE" => "Username <strong>{{user_name}}</strong> is not available. Choose a different name, or click 'suggest'."
+        "IN_USE"        => "Username <strong>{{username}}</strong> is already in use.",
+        "NOT_AVAILABLE" => "Username <strong>{{username}}</strong> is not available. Choose a different name, or click 'suggest'."
     ],
 
     "USER_ID_INVALID"       => "The requested user id does not exist.",

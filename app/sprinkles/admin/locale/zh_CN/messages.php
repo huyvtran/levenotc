@@ -34,13 +34,13 @@ return [
 
     "DASHBOARD"             => "仪表盘",
     "DELETE_MASTER"         => "你不能删除超级账户!",
-    "DELETION_SUCCESSFUL"   => "用户 <strong>{{user_name}}</strong> 删除成功.",
-    "DETAILS_UPDATED"       => "用户 <strong>{{user_name}}</strong> 更新成功",
+    "DELETION_SUCCESSFUL"   => "用户 <strong>{{username}}</strong> 删除成功.",
+    "DETAILS_UPDATED"       => "用户 <strong>{{username}}</strong> 更新成功",
     "DISABLE_MASTER"        => "你不能禁用超级用户!",
     "DISABLE_SELF"          => "不能禁用你自己的账户!",
-    "DISABLE_SUCCESSFUL"    => "用户名<strong>{{user_name}}</strong> 成功禁用.",
+    "DISABLE_SUCCESSFUL"    => "用户名<strong>{{username}}</strong> 成功禁用.",
 
-    "ENABLE_SUCCESSFUL" => "用户名 <strong>{{user_name}}</strong> 启用成功.",
+    "ENABLE_SUCCESSFUL" => "用户名 <strong>{{username}}</strong> 启用成功.",
 
     "GROUP" => [
         1 => "组",
@@ -65,7 +65,7 @@ return [
         "UPDATE"        => "组<strong>{{name}}</strong>的信息已经更新"
     ],
 
-    "MANUALLY_ACTIVATED"    => "{{user_name}} 账户已手动激活",
+    "MANUALLY_ACTIVATED"    => "{{username}} 账户已手动激活",
     "MASTER_ACCOUNT_EXISTS" => "超级账户已存在!",
     "MIGRATION" => [
         "REQUIRED"          => "数据库需要更新"
@@ -139,7 +139,7 @@ return [
 
         "ACTIVATE"          => "激活用户",
         "CREATE"            => "新建用户",
-        "CREATED"           => "用户 <strong>{{user_name}}</strong> 新建成功",
+        "CREATED"           => "用户 <strong>{{username}}</strong> 新建成功",
         "DELETE"            => "删除用户",
         "DELETE_CONFIRM"    => "确定要删除用户 <strong>{{name}}</strong>?",
         "DELETE_YES"        => "是, 删除用户",

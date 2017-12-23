@@ -31,12 +31,12 @@ return [
     "DASHBOARD"             => "لوحة القيادة",
     "NO_FEATURES_YET"       => "لا يبدو أن أي ميزات تم إعدادها لهذا الحساب حتى الآن. ربما لم يتم تنفيذها بعد، أو ربما شخص نسي أن يعطيك الوصول. في كلتا الحالتين، نحن سعداء أن يكون لك على متن!",
     "DELETE_MASTER"         => "لا يمكنك حذف الحساب الرئيسي",
-    "DELETION_SUCCESSFUL"   => "المستعمل <strong>{{user_name}}</strong> حذف بنجاح",
-    "DETAILS_UPDATED"       => "جدد تفاصيل الحساب للمستخدم <strong>{{user_name}}</strong>",
+    "DELETION_SUCCESSFUL"   => "المستعمل <strong>{{username}}</strong> حذف بنجاح",
+    "DETAILS_UPDATED"       => "جدد تفاصيل الحساب للمستخدم <strong>{{username}}</strong>",
     "DISABLE_MASTER"        => "لا يمكنك تعطيل الحساب الرئيسي",
-    "DISABLE_SUCCESSFUL"    => "حساب المستخدم <strong>{{user_name}}</strong> عطيل بنجاح",
+    "DISABLE_SUCCESSFUL"    => "حساب المستخدم <strong>{{username}}</strong> عطيل بنجاح",
 
-    "ENABLE_SUCCESSFUL" => "حساب المستخدم <strong>{{user_name}}</strong> مكين بنجاح",
+    "ENABLE_SUCCESSFUL" => "حساب المستخدم <strong>{{username}}</strong> مكين بنجاح",
 
     "GROUP" => [
         1 => "مجموعة",
@@ -56,7 +56,7 @@ return [
         "PAGE_DESCRIPTION" => "قائمة المجموعات لموقعك يوفر أدوات لإدارة التحرير وحذف مجموعات"
     ],
 
-    "MANUALLY_ACTIVATED"    => "تم تفعيل حساب{{user_name}}",
+    "MANUALLY_ACTIVATED"    => "تم تفعيل حساب{{username}}",
     "MASTER_ACCOUNT_EXISTS" => "الحساب الرئيسي موجود بالفعل",
     "MIGRATION" => [
         "REQUIRED"          => "تحديث قاعدة البيانات مطلوب"

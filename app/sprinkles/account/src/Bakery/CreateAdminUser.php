@@ -97,7 +97,7 @@ class CreateAdminUser extends BaseCommand
             // Ok, now we've got the info and we can create the new user.
             $this->io->write("\n<info>Saving the root user details...</info>");
             $rootUser = new User([
-                "user_name" => $userName,
+                "username" => $userName,
                 "email" => $email,
                 "first_name" => $firstName,
                 "last_name" => $lastName,

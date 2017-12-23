@@ -35,15 +35,15 @@ $(document).ready(function() {
             separator: '.'
         });
         // Set slug
-        form.find('input[name=user_name]').val(userName);
+        form.find('input[name=username]').val(userName);
     });
 
     // Autovalidate username field on a delay
     var timer;
-    $("#register").find('input[name=first_name], input[name=last_name], input[name=user_name]').on('input change', function() {
+    $("#register").find('input[name=first_name], input[name=last_name], input[name=username]').on('input change', function() {
         clearTimeout(timer); // Clear the timer so we don't end up with dupes.
         timer = setTimeout(function() { // assign timer a new timeout 
-            $("#register").find('input[name=user_name]').valid();
+            $("#register").find('input[name=username]').valid();
         }, 500);
     });
 
@@ -54,12 +54,12 @@ $(document).ready(function() {
         $.getJSON(site.uri.public + '/account/suggest-username')
         .done(function (data) {
             // Set suggestion
-            form.find('input[name=user_name]').val(data.user_name);
+            form.find('input[name=username]').val(data.username);
         });
     });
 
-    // Turn off autogenerate when someone enters stuff manually in user_name
-    $("#register").find('input[name=user_name]').on('input', function() {
+    // Turn off autogenerate when someone enters stuff manually in username
+    $("#register").find('input[name=username]').on('input', function() {
         autoGenerate = false;
     });
 
@@ -69,7 +69,7 @@ $(document).ready(function() {
         page.validators.register,
         {
             rules: {
-                user_name: {
+                username: {
                     remote: {
                         url: site.uri.public + '/account/check-username',
                         dataType: 'text'

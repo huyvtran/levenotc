@@ -38,7 +38,7 @@
     <script id="user-table-column-info" type="text/x-handlebars-template">
         <td data-text="{{row.last_name}}">
             <strong>
-                <a href="{{site.uri.public}}/users/u/{{row.user_name}}">{{row.first_name}} {{row.last_name}} ({{row.user_name}})</a>
+                <a href="{{site.uri.public}}/users/u/{{row.username}}">{{row.first_name}} {{row.last_name}} ({{row.username}})</a>
             </strong>
             <div class="js-copy-container">
                 <span class="js-copy-target">{{row.email}}</span>
@@ -97,39 +97,39 @@
                 <ul class="dropdown-menu dropdown-menu-right-responsive" role="menu">
                     {{#ifx row.flag_verified '==' 0 }}
                     <li>
-                        <a href="#" data-user_name="{{row.user_name}}" class="js-user-activate">
+                        <a href="#" data-username="{{row.username}}" class="js-user-activate">
                         <i class="fa fa-bolt"></i> {% endverbatim %}{{translate("USER.ACTIVATE")}}{% verbatim %}
                         </a>
                     </li>
                     {{/ifx }}
                     <li>
-                        <a href="#" data-user_name="{{row.user_name}}" class="js-user-edit">
+                        <a href="#" data-username="{{row.username}}" class="js-user-edit">
                         <i class="fa fa-edit"></i> {% endverbatim %}{{translate("USER.EDIT")}}{% verbatim %}
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-user_name="{{row.user_name}}" class="js-user-roles">
+                        <a href="#" data-username="{{row.username}}" class="js-user-roles">
                         <i class="fa fa-drivers-license"></i> {% endverbatim %}{{translate("ROLE.MANAGE")}}{% verbatim %}
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-user_name="{{row.user_name}}" class="js-user-password">
+                        <a href="#" data-username="{{row.username}}" class="js-user-password">
                         <i class="fa fa-key"></i> {% endverbatim %}{{translate("USER.ADMIN.CHANGE_PASSWORD")}}{% verbatim %}
                         </a>
                     </li>
                     <li>
                     {{#ifx row.flag_enabled '==' 1 }}
-                        <a href="#" data-user_name="{{row.user_name}}" class="js-user-disable">
+                        <a href="#" data-username="{{row.username}}" class="js-user-disable">
                         <i class="fa fa-minus-circle"></i> {% endverbatim %}{{translate("USER.DISABLE")}}{% verbatim %}
                         </a>
                     {{ else }}
-                        <a href="#" data-user_name="{{row.user_name}}" class="js-user-enable">
+                        <a href="#" data-username="{{row.username}}" class="js-user-enable">
                         <i class="fa fa-plus-circle"></i> {% endverbatim %}{{translate("USER.ENABLE")}}{% verbatim %}
                         </a>
                     {{/ifx }}
                     </li>
                     <li>
-                        <a href="#" data-user_name="{{row.user_name}}" class="js-user-delete">
+                        <a href="#" data-username="{{row.username}}" class="js-user-delete">
                         <i class="fa fa-trash-o"></i> {% endverbatim %}{{translate("USER.DELETE")}}{% verbatim %}
                         </a>
                     </li>

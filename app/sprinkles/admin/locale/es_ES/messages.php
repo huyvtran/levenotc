@@ -35,13 +35,13 @@ return [
     "DASHBOARD" => "Tablero",
     "NO_FEATURES_YET" => "No parece que se hayan configurado funciones para esta cuenta ... todavía. Tal vez no se han implementado todavía, o tal vez alguien se olvidó de darle acceso. De cualquier manera, ¡estamos encantados de tenerte a bordo!",
     "DELETE_MASTER" => "¡No puede eliminar la cuenta principal!",
-    "DELETION_SUCCESSFUL" => "El usuario <strong> {{user_name}} </strong> se ha eliminado correctamente.",
-    "DETAILS_UPDATED" => "Detalles de la cuenta actualizados para el usuario <strong> {{user_name}} </strong>",
+    "DELETION_SUCCESSFUL" => "El usuario <strong> {{username}} </strong> se ha eliminado correctamente.",
+    "DETAILS_UPDATED" => "Detalles de la cuenta actualizados para el usuario <strong> {{username}} </strong>",
     "DISABLE_MASTER" => "¡No puedes deshabilitar la cuenta principal!",
     "DISABLE_SELF" => "¡No puedes inhabilitar tu propia cuenta!",
-    "DISABLE_SUCCESSFUL" => "La cuenta para el usuario <strong> {{user_name}} </strong> se ha desactivado correctamente.",
+    "DISABLE_SUCCESSFUL" => "La cuenta para el usuario <strong> {{username}} </strong> se ha desactivado correctamente.",
 
-    "ENABLE_SUCCESSFUL" => "La cuenta para el usuario <strong> {{user_name}} </strong> se ha habilitado correctamente.",
+    "ENABLE_SUCCESSFUL" => "La cuenta para el usuario <strong> {{username}} </strong> se ha habilitado correctamente.",
 
     "GROUP" => [
         1 => "Grupo",
@@ -67,7 +67,7 @@ return [
         "UPDATE" => "Detalles actualizados para el grupo <strong> {{name}} </strong>"
     ],
 
-    "MANUALLY_ACTIVATED" => "La cuenta de {{user_name}} se ha activado manualmente",
+    "MANUALLY_ACTIVATED" => "La cuenta de {{username}} se ha activado manualmente",
     "MASTER_ACCOUNT_EXISTS" => "¡La cuenta maestra ya existe!",
     "MIGRATION" => [
         "REQUIRED" => "Se requiere actualizar la base de datos"
@@ -142,7 +142,7 @@ return [
 
         "ACTIVATE" => "Activar usuario",
         "CREATE" => "Crear usuario",
-        "CREATED" => "Se ha creado correctamente el usuario <strong> {{user_name}} </strong>",
+        "CREATED" => "Se ha creado correctamente el usuario <strong> {{username}} </strong>",
         "DELETE" => "Borrar usuario",
         "DELETE_CONFIRM" => "¿Seguro que desea eliminar el usuario <strong> {{name}} </strong>?",
         "DELETE_YES" => "Sí, eliminar usuario",

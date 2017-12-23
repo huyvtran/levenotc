@@ -31,13 +31,13 @@ return [
     "DASHBOARD"             => "Dashboard",
     "NO_FEATURES_YET"       => "It doesn't look like any features have been set up for this account...yet.  Maybe they haven't been implemented yet, or maybe someone forgot to give you access.  Either way, we're glad to have you aboard!",
     "DELETE_MASTER"         => "You cannot delete the master account!",
-    "DELETION_SUCCESSFUL"   => "User <strong>{{user_name}}</strong> has been successfully deleted.",
-    "DETAILS_UPDATED"       => "Account details updated for user <strong>{{user_name}}</strong>",
+    "DELETION_SUCCESSFUL"   => "User <strong>{{username}}</strong> has been successfully deleted.",
+    "DETAILS_UPDATED"       => "Account details updated for user <strong>{{username}}</strong>",
     "DISABLE_MASTER"        => "You cannot disable the master account!",
     "DISABLE_SELF"          => "You cannot disable your own account!",
-    "DISABLE_SUCCESSFUL"    => "Account for user <strong>{{user_name}}</strong> has been successfully disabled.",
+    "DISABLE_SUCCESSFUL"    => "Account for user <strong>{{username}}</strong> has been successfully disabled.",
 
-    "ENABLE_SUCCESSFUL" => "Account for user <strong>{{user_name}}</strong> has been successfully enabled.",
+    "ENABLE_SUCCESSFUL" => "Account for user <strong>{{username}}</strong> has been successfully enabled.",
 
     "GROUP" => [
         1 => "Group",
@@ -63,7 +63,7 @@ return [
         "UPDATE"        => "Details updated for group <strong>{{name}}</strong>"
     ],
 
-    "MANUALLY_ACTIVATED"    => "{{user_name}}'s account has been manually activated",
+    "MANUALLY_ACTIVATED"    => "{{username}}'s account has been manually activated",
     "MASTER_ACCOUNT_EXISTS" => "The master account already exists!",
     "MIGRATION" => [
         "REQUIRED"          => "Database update required"
@@ -137,7 +137,7 @@ return [
 
         "ACTIVATE"          => "Activate user",
         "CREATE"            => "Create user",
-        "CREATED"           => "User <strong>{{user_name}}</strong> has been successfully created",
+        "CREATED"           => "User <strong>{{username}}</strong> has been successfully created",
         "DELETE"            => "Delete user",
         "DELETE_CONFIRM"    => "Are you sure you want to delete the user <strong>{{name}}</strong>?",
         "DELETE_YES"        => "Yes, delete user",

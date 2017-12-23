@@ -30,7 +30,7 @@ class UsersTable extends Migration
         if (!$this->schema->hasTable('users')) {
             $this->schema->create('users', function (Blueprint $table) {
                 $table->increments('id');
-                $table->string('user_name', 50);
+                $table->string('username', 50);
                 $table->string('email', 254);
                 $table->string('first_name', 20);
                 $table->string('last_name', 30);
@@ -49,8 +49,8 @@ class UsersTable extends Migration
                 $table->charset = 'utf8';
                 //$table->foreign('group_id')->references('id')->on('groups');
                 //$table->foreign('last_activity_id')->references('id')->on('activities');
-                $table->unique('user_name');
-                $table->index('user_name');
+                $table->unique('username');
+                $table->index('username');
                 $table->unique('email');
                 $table->index('email');
                 $table->index('group_id');

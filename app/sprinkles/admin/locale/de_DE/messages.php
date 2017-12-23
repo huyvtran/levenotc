@@ -33,13 +33,13 @@ return [
     "DASHBOARD"                         => "Übersicht",
     "NO_FEATURES_YET"                   => "Es sieht aus, als wären für Ihren Account noch keine Funktionen aktiviert... bisher. Entweder sie wurden bisher noch nicht implementiert, oder Ihnen fehlen noch die Berechtigungen. Trotzdem ist es schön, dass Sie auf unsere Seite gekommen sind!",
     "DELETE_MASTER"                     => "Sie können das Root-Konto nicht löschen!",
-    "DELETION_SUCCESSFUL"               => "Benutzer <strong>{{user_name}}</strong> wurde erfolgreich gelöscht.",
-    "DETAILS_UPDATED"                   => "Konto-Daten für <strong>{{user_name}}</strong> aktualisiert.",
+    "DELETION_SUCCESSFUL"               => "Benutzer <strong>{{username}}</strong> wurde erfolgreich gelöscht.",
+    "DETAILS_UPDATED"                   => "Konto-Daten für <strong>{{username}}</strong> aktualisiert.",
     "DISABLE_MASTER"                    => "Sie können das Root-Konto nicht deaktivieren!",
     "DISABLE_SELF"                      => "Sie können Ihr eigenes Konto nicht deaktivieren!",
-    "DISABLE_SUCCESSFUL"                => "Konto von <strong>{{user_name}}</strong> wurde erfolgreich deaktiviert.",
+    "DISABLE_SUCCESSFUL"                => "Konto von <strong>{{username}}</strong> wurde erfolgreich deaktiviert.",
 
-    "ENABLE_SUCCESSFUL"                 => "Konto von {{user_name}} wurde erfolgreich aktiviert.",
+    "ENABLE_SUCCESSFUL"                 => "Konto von {{username}} wurde erfolgreich aktiviert.",
 
     "GROUP" => [
         1                               => "Gruppe",
@@ -65,7 +65,7 @@ return [
         "UPDATE"                        => "Details für die Gruppe <strong>{{name}}</strong> aktualisiert"
     ],
 
-    "MANUALLY_ACTIVATED"                => "{{user_name}}'s Konto wurde manuell aktiviert.",
+    "MANUALLY_ACTIVATED"                => "{{username}}'s Konto wurde manuell aktiviert.",
     "MASTER_ACCOUNT_EXISTS"             => "Das Root-Konto existiert bereits!",
     "MIGRATION" => [
         "REQUIRED"                      => "Datenbankaktualisierung erforderlich"
@@ -139,7 +139,7 @@ return [
 
         "ACTIVATE"                      => "Benutzer aktivieren",
         "CREATE"                        => "Benutzer erstellen",
-        "CREATED"                       => "Benutzer <strong>{{user_name}}</strong> wurde erfolgreich erstellt",
+        "CREATED"                       => "Benutzer <strong>{{username}}</strong> wurde erfolgreich erstellt",
         "DELETE"                        => "Benutzer löschen",
         "DELETE_CONFIRM"                => "Sind Sie sicher, dass Sie den Benutzer <strong>{{name}}</strong> löschen möchten?",
         "DELETE_YES"                    => "Ja, Benutzer löschen",

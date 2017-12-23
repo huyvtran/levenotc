@@ -30,12 +30,12 @@ return [
 
     "DASHBOARD"             => "Painel de Controlo",
     "DELETE_MASTER"         => "Não pode apagar a conta principal!",
-    "DELETION_SUCCESSFUL"   => "Utilizador <strong>{{user_name}}</strong> foi removido com sucesso.",
-    "DETAILS_UPDATED"       => "Detalhes de conta atualizados para o utilizador <strong>{{user_name}}</strong>",
+    "DELETION_SUCCESSFUL"   => "Utilizador <strong>{{username}}</strong> foi removido com sucesso.",
+    "DETAILS_UPDATED"       => "Detalhes de conta atualizados para o utilizador <strong>{{username}}</strong>",
     "DISABLE_MASTER"        => "Não pode desativar a conta principal!",
-    "DISABLE_SUCCESSFUL"    => "Conta do utilizador <strong>{{user_name}}</strong> foi desativada com sucesso.",
+    "DISABLE_SUCCESSFUL"    => "Conta do utilizador <strong>{{username}}</strong> foi desativada com sucesso.",
 
-    "ENABLE_SUCCESSFUL" => "Conta do utilizador <strong>{{user_name}}</strong> foi ativada com sucesso.",
+    "ENABLE_SUCCESSFUL" => "Conta do utilizador <strong>{{username}}</strong> foi ativada com sucesso.",
 
     "GROUP" => [
         1 => "Grupo",
@@ -57,7 +57,7 @@ return [
         "PAGE_DESCRIPTION" => "Lista de grupos do site. Contém opções para editar e remover grupos."
     ],
 
-    "MANUALLY_ACTIVATED"    => "A conta de {{user_name}} foi ativada manualmente.",
+    "MANUALLY_ACTIVATED"    => "A conta de {{username}} foi ativada manualmente.",
     "MASTER_ACCOUNT_EXISTS" => "A contra principal já existe!",
     "MIGRATION" => [
         "REQUIRED"          => "É necessário uma atualização da base de dados."

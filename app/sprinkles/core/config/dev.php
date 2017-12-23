@@ -7,12 +7,14 @@
 
     return [
         'assets' => [
-            'use_raw' => true
+            'use_raw' => false
         ],
         'cache' => [
             'twig' => false
         ],
         'debug' => [
+            'queries' => true,
+
             'twig' => true,
             'auth' => true,
             'smtp' => true

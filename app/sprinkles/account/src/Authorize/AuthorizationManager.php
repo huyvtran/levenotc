@@ -80,7 +80,7 @@ class AuthorizationManager
         if ($debug) {
             $trace = array_slice(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 3), 1);
             $this->ci->authLogger->debug("Authorization check requested at: ", $trace);
-            $this->ci->authLogger->debug("Checking authorization for user {$user->id} ('{$user->user_name}') on permission '$slug'...");
+            $this->ci->authLogger->debug("Checking authorization for user {$user->id} ('{$user->username}') on permission '$slug'...");
         }
 
         if ($this->ci->authenticator->guest()) {

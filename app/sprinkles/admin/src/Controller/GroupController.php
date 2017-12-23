@@ -109,7 +109,7 @@ class GroupController extends SimpleController
             $group->save();
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$currentUser->user_name} created group {$group->name}.", [
+            $this->ci->userActivityLogger->info("User {$currentUser->username} created group {$group->name}.", [
                 'type' => 'group_create',
                 'user_id' => $currentUser->id
             ]);
@@ -184,7 +184,7 @@ class GroupController extends SimpleController
             unset($group);
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$currentUser->user_name} deleted group {$groupName}.", [
+            $this->ci->userActivityLogger->info("User {$currentUser->username} deleted group {$groupName}.", [
                 'type' => 'group_delete',
                 'user_id' => $currentUser->id
             ]);
@@ -639,7 +639,7 @@ class GroupController extends SimpleController
             $group->save();
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$currentUser->user_name} updated details for group {$group->name}.", [
+            $this->ci->userActivityLogger->info("User {$currentUser->username} updated details for group {$group->name}.", [
                 'type' => 'group_update_info',
                 'user_id' => $currentUser->id
             ]);

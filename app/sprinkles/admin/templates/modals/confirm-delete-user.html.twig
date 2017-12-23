@@ -7,7 +7,7 @@
     {% include "forms/csrf.html.twig" %}
     <div class="js-form-alerts">
     </div>
-    <h4>{{translate("USER.DELETE_CONFIRM", {name: user.user_name})}}<br><small>{{translate("DELETE_CANNOT_UNDONE")}}</small></h4>
+    <h4>{{translate("USER.DELETE_CONFIRM", {name: user.username})}}<br><small>{{translate("DELETE_CANNOT_UNDONE")}}</small></h4>
     <br>
     <div class="btn-group-action">
         <button type="submit" class="btn btn-danger btn-lg btn-block">{{translate("USER.DELETE_YES")}}</button>

@@ -1,0 +1,8 @@
+{% if setting('copyright.owned') and setting('copyright.thirdCopyright')|default(0) != 2 and setting('copyright.licenseDomains') and app.request.server.get('HTTP_HOST') in setting('copyright.licenseDomains')|split(';') %}
+  {% if setting('copyright.name') %}
+    Powered by <a href="{{ path('homepage') }}" target="_blank">{{ setting('copyright.name') }}</a>
+  {% endif %}
+{% else %}
+   &copy; <a href="{{site.uri.public}}">{{site.title}}</a>, {{ "now"|date("Y") }}.Powered by {{site.title}}
+
+ {% endif %}

@@ -27,7 +27,7 @@
        <script id="user-table-column-info" type="text/x-handlebars-template">
            <td data-text="{{row.last_name}}">
                <strong>
-                   <a href="{{site.uri.public}}/users/u/{{row.user_name}}">{{row.first_name}} {{row.last_name}} ({{row.user_name}})</a>
+                   <a href="{{site.uri.public}}/users/u/{{row.username}}">{{row.first_name}} {{row.last_name}} ({{row.username}})</a>
                </strong>
                <div>
                    <i class="fa fa-envelope"></i> <a href="mailto:{{row.email}}">{{row.email}}</a>

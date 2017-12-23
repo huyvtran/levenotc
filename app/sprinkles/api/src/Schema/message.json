@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Product set",
+  "type": "object",
+  "items": {
+    "title": "Message",
+    "type": "object",
+    "properties": {
+      "order_id": {
+        "description": "订单编号",
+        "type": "number"
+      },
+      "from": {
+        "type": "number",
+        "description": "消息发送者ID"
+      },
+      "to": {
+        "type": "number",
+        "description": "消息接收者ID"
+      },
+      "public": {
+        "type": "number",
+        "description": "是否系统消息"
+      },
+      "message": {
+        "type": "array",
+        "properties": {
+          "content": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "content",
+          "type"
+        ]
+      }
+
+    },
+    "required": [
+      "order_id",
+      "from",
+      "to",
+      "message"
+    ]
+  }
+}

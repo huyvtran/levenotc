@@ -48,7 +48,7 @@ class UserController extends SimpleController
      */
     public function create($request, $response, $args)
     {
-        // Get POST parameters: user_name, first_name, last_name, email, locale, (group)
+        // Get POST parameters: username, first_name, last_name, email, locale, (group)
         $params = $request->getParsedBody();
 
         /** @var UserFrosting\Sprinkle\Account\Authorize\AuthorizationManager $authorizer */
@@ -85,7 +85,7 @@ class UserController extends SimpleController
         $classMapper = $this->ci->classMapper;
 
         // Check if username or email already exists
-        if ($classMapper->staticMethod('user', 'findUnique', $data['user_name'], 'user_name')) {
+        if ($classMapper->staticMethod('user', 'findUnique', $data['username'], 'username')) {
             $ms->addMessageTranslated('danger', 'USERNAME.IN_USE', $data);
             $error = true;
         }
@@ -131,7 +131,7 @@ class UserController extends SimpleController
             $user->save();
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$currentUser->user_name} created a new account for {$user->user_name}.", [
+            $this->ci->userActivityLogger->info("User {$currentUser->username} created a new account for {$user->username}.", [
                 'type' => 'account_create',
                 'user_id' => $currentUser->id
             ]);
@@ -275,7 +275,7 @@ class UserController extends SimpleController
             throw $e;
         }
 
-        $userName = $user->user_name;
+        $userName = $user->username;
 
         // Begin transaction - DB will be rolled back if an exception occurs
         Capsule::transaction( function() use ($user, $userName, $currentUser) {
@@ -283,7 +283,7 @@ class UserController extends SimpleController
             unset($user);
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$currentUser->user_name} deleted the account for {$userName}.", [
+            $this->ci->userActivityLogger->info("User {$currentUser->username} deleted the account for {$userName}.", [
                 'type' => 'account_delete',
                 'user_id' => $currentUser->id
             ]);
@@ -293,7 +293,7 @@ class UserController extends SimpleController
         $ms = $this->ci->alerts;
 
         $ms->addMessageTranslated('success', 'DELETION_SUCCESSFUL', [
-            'user_name' => $userName
+            'username' => $userName
         ]);
 
         return $response->withStatus(200);
@@ -365,7 +365,7 @@ class UserController extends SimpleController
 
         // Join user's most recent activity
         $user = $classMapper->createInstance('user')
-                            ->where('user_name', $user->user_name)
+                            ->where('username', $user->username)
                             ->joinLastActivity()
                             ->with('lastActivity', 'group')
                             ->first();
@@ -469,7 +469,7 @@ class UserController extends SimpleController
         return $this->ci->view->render($response, 'modals/confirm-delete-user.html.twig', [
             'user' => $user,
             'form' => [
-                'action' => "api/users/u/{$user->user_name}",
+                'action' => "api/users/u/{$user->username}",
             ]
         ]);
     }
@@ -583,7 +583,7 @@ class UserController extends SimpleController
         $classMapper = $this->ci->classMapper;
 
         // Get the user to edit
-        $user = $classMapper->staticMethod('user', 'where', 'user_name', $user->user_name)
+        $user = $classMapper->staticMethod('user', 'where', 'username', $user->username)
             ->with('group')
             ->first();
 
@@ -614,7 +614,7 @@ class UserController extends SimpleController
         // Generate form
         $fields = [
             'hidden' => ['theme'],
-            'disabled' => ['user_name']
+            'disabled' => ['username']
         ];
 
         // Disable group field if currentUser doesn't have permission to modify group
@@ -636,7 +636,7 @@ class UserController extends SimpleController
             'groups' => $groups,
             'locales' => $locales,
             'form' => [
-                'action' => "api/users/u/{$user->user_name}",
+                'action' => "api/users/u/{$user->username}",
                 'method' => 'PUT',
                 'fields' => $fields,
                 'submit_text' => $translator->translate('UPDATE')
@@ -860,7 +860,7 @@ class UserController extends SimpleController
         $locales = $config->getDefined('site.locales.available');
 
         // Determine fields that currentUser is authorized to view
-        $fieldNames = ['user_name', 'name', 'email', 'locale', 'group', 'roles'];
+        $fieldNames = ['username', 'name', 'email', 'locale', 'group', 'roles'];
 
         // Generate form
         $fields = [
@@ -1083,14 +1083,14 @@ class UserController extends SimpleController
             $user->save();
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$currentUser->user_name} updated basic account info for user {$user->user_name}.", [
+            $this->ci->userActivityLogger->info("User {$currentUser->username} updated basic account info for user {$user->username}.", [
                 'type' => 'account_update_info',
                 'user_id' => $currentUser->id
             ]);
         });
 
         $ms->addMessageTranslated('success', 'DETAILS_UPDATED', [
-            'user_name' => $user->user_name
+            'username' => $user->username
         ]);
         return $response->withStatus(200);
     }
@@ -1214,7 +1214,7 @@ class UserController extends SimpleController
             }
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$currentUser->user_name} updated property '$fieldName' for user {$user->user_name}.", [
+            $this->ci->userActivityLogger->info("User {$currentUser->username} updated property '$fieldName' for user {$user->username}.", [
                 'type' => 'account_update_field',
                 'user_id' => $currentUser->id
             ]);
@@ -1224,20 +1224,20 @@ class UserController extends SimpleController
         if ($fieldName == 'flag_enabled') {
             if ($fieldValue == '1') {
                 $ms->addMessageTranslated('success', 'ENABLE_SUCCESSFUL', [
-                    'user_name' => $user->user_name
+                    'username' => $user->username
                 ]);
             } else {
                 $ms->addMessageTranslated('success', 'DISABLE_SUCCESSFUL', [
-                    'user_name' => $user->user_name
+                    'username' => $user->username
                 ]);
             }
         } elseif ($fieldName == 'flag_verified') {
             $ms->addMessageTranslated('success', 'MANUALLY_ACTIVATED', [
-                'user_name' => $user->user_name
+                'username' => $user->username
             ]);
         } else {
             $ms->addMessageTranslated('success', 'DETAILS_UPDATED', [
-                'user_name' => $user->user_name
+                'username' => $user->username
             ]);
         }
 
@@ -1270,7 +1270,7 @@ class UserController extends SimpleController
         $classMapper = $this->ci->classMapper;
 
         // Get the user to delete
-        $user = $classMapper->staticMethod('user', 'where', 'user_name', $data['user_name'])
+        $user = $classMapper->staticMethod('user', 'where', 'username', $data['username'])
             ->first();
 
         return $user;

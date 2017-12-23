@@ -1,5 +1,5 @@
 ---
-user_name:
+username:
   validators:
     required:
       label: "&USERNAME"

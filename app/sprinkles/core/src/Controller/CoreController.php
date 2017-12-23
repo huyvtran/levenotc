@@ -81,6 +81,7 @@ class CoreController extends SimpleController
         // By starting this service, we ensure that the timezone gets set.
         $config = $this->ci->config;
 
+
         $assetLoader = $this->ci->assetLoader;
 
         if (!$assetLoader->loadAsset($args['url'])) {

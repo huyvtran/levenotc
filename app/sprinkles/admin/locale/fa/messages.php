@@ -31,12 +31,12 @@ return [
 
 	    "DASHBOARD"             => "کارتابل",
 	    "DELETE_MASTER"         => "شما نمیتوانید کاربر اصلی را حذف کنید",
-	    "DELETION_SUCCESSFUL"   => "<strong>{{user_name}}</strong> با موفقیت حذف شد.",
-	    "DETAILS_UPDATED"       => "جزئیات <strong>{{user_name}}</strong> با موفقیت ذخیره شد.",
+	    "DELETION_SUCCESSFUL"   => "<strong>{{username}}</strong> با موفقیت حذف شد.",
+	    "DETAILS_UPDATED"       => "جزئیات <strong>{{username}}</strong> با موفقیت ذخیره شد.",
 	    "DISABLE_MASTER"        => "شما نمیتوانید کاربر اصلی را غیر فعال کنید.",
-	    "DISABLE_SUCCESSFUL"    => "حساب کاربری <strong>{{user_name}}</strong> با موفقیت غیر فعال شد.",
+	    "DISABLE_SUCCESSFUL"    => "حساب کاربری <strong>{{username}}</strong> با موفقیت غیر فعال شد.",
 
-	    "ENABLE_SUCCESSFUL" => "حساب کاربری <strong>{{user_name}}</strong> با موفقیت فعال شد.",
+	    "ENABLE_SUCCESSFUL" => "حساب کاربری <strong>{{username}}</strong> با موفقیت فعال شد.",
 
     "GROUP" => [
         1 => "گروه",
@@ -62,7 +62,7 @@ return [
         "UPDATE"        => "اطلاعات گروه <strong>{{name}}</strong> به روز رسانی شد."
     ],
 
-    "MANUALLY_ACTIVATED"    => "حساب کاربری {{user_name}} بصورت دستی فعال شد.",
+    "MANUALLY_ACTIVATED"    => "حساب کاربری {{username}} بصورت دستی فعال شد.",
     "MASTER_ACCOUNT_EXISTS" => "حساب کاربری اصلی وجود دارد!",
     "MIGRATION" => [
         "REQUIRED"          => "به روز رسانی پایگاه داده ها باید انجام شود"
@@ -136,7 +136,7 @@ return [
 
         "ACTIVATE"          => "کاربر فعال",
         "CREATE"            => "اضافه کردن کاربر",
-        "CREATED"           => "کاربر <strong>{{user_name}}</strong> با موفقیت اضافه شد",
+        "CREATED"           => "کاربر <strong>{{username}}</strong> با موفقیت اضافه شد",
         "DELETE"            => "حذف کاربر",
         "DELETE_CONFIRM"    => "آیا اطمینان دارید که میخواهید کاربر <strong>{{name}}</strong> را حذف کنید؟",
         "DELETE_YES"        => "بله، کاربر حذف شود",

@@ -139,19 +139,11 @@
                 // with the exception of English, which as the default language comes first.
                 'available' => [
                     'en_US' => 'English',
-                    'zh_CN' => '中文',
-                    'es_ES' => 'Español',
-                    'ar'    => 'العربية',
-                    'pt_PT' => 'Português',
-                    'ru_RU' => 'русский',
-                    'de_DE' => 'Deutsch',
-                    'fr_FR' => 'Français',
-                    'it_IT' => 'Italiano',
-                    'th_TH' => 'ภาษาไทย',
-                    'fa'    => 'فارسی'
+                    'zh_CN' => '中文'
+
                 ],
                 // This can be a comma-separated list, to load multiple fallback locales
-                'default' => 'en_US'
+                'default' => 'zh_CN'
             ],
             'title'     =>      'UserFrosting',
             // Global ufTable settings

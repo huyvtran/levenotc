@@ -52,10 +52,10 @@
             ],
             'registration' => [
                 'enabled' => true,
-                'captcha' => true,
-                'require_email_verification' => true,
+                'captcha' => false,
+                'require_email_verification' => false,
                 'user_defaults' => [
-                    'locale' => 'en_US',
+                    'locale' => 'zh_CN',
                     'group' => 'terran',
                     // Default roles for newly registered users
                     'roles' => [

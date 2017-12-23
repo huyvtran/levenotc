@@ -201,13 +201,13 @@ class PermissionsTable extends Migration
                 'view_user_field' => new Permission([
                     'slug' => 'view_user_field',
                     'name' => 'View user',
-                    'conditions' => "in(property,['user_name','name','email','locale','theme','roles','group','activities'])",
+                    'conditions' => "in(property,['username','name','email','locale','theme','roles','group','activities'])",
                     'description' => 'View certain properties of any user.'
                 ]),
                 'view_user_field_group' => new Permission([
                     'slug' => 'view_user_field',
                     'name' => 'View user',
-                    'conditions' => "equals_num(self.group_id,user.group_id) && !is_master(user.id) && !has_role(user.id,{$defaultRoleIds['site-admin']}) && (!has_role(user.id,{$defaultRoleIds['group-admin']}) || equals_num(self.id,user.id)) && in(property,['user_name','name','email','locale','roles','group','activities'])",
+                    'conditions' => "equals_num(self.group_id,user.group_id) && !is_master(user.id) && !has_role(user.id,{$defaultRoleIds['site-admin']}) && (!has_role(user.id,{$defaultRoleIds['group-admin']}) || equals_num(self.id,user.id)) && in(property,['username','name','email','locale','roles','group','activities'])",
                     'description' => 'View certain properties of any user in your own group, except the master user and Site and Group Administrators (except yourself).'
                 ])
             ];

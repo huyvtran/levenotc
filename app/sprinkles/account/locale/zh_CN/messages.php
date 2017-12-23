@@ -165,8 +165,8 @@ return [
 
         "CHOOSE"        => "取一个唯一的用户名",
         "INVALID"       => "无效的用户名",
-        "IN_USE"        => "用户名 <strong>{{user_name}}</strong> 已存在.",
-        "NOT_AVAILABLE" => "用户名 <strong>{{user_name}}</strong> 不可用. 重新选择用户名, 或者点击 '建议'."
+        "IN_USE"        => "用户名 <strong>{{username}}</strong> 已存在.",
+        "NOT_AVAILABLE" => "用户名 <strong>{{username}}</strong> 不可用. 重新选择用户名, 或者点击 '建议'."
     ],
 
     "USER_ID_INVALID"       => "请求的用户不存在.",

@@ -109,7 +109,7 @@ class RoleController extends SimpleController
             $role->save();
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$currentUser->user_name} created role {$role->name}.", [
+            $this->ci->userActivityLogger->info("User {$currentUser->username} created role {$role->name}.", [
                 'type' => 'role_create',
                 'user_id' => $currentUser->id
             ]);
@@ -183,7 +183,7 @@ class RoleController extends SimpleController
             unset($role);
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$currentUser->user_name} deleted role {$roleName}.", [
+            $this->ci->userActivityLogger->info("User {$currentUser->username} deleted role {$roleName}.", [
                 'type' => 'role_delete',
                 'user_id' => $currentUser->id
             ]);
@@ -736,7 +736,7 @@ class RoleController extends SimpleController
             $role->save();
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$currentUser->user_name} updated details for role {$role->name}.", [
+            $this->ci->userActivityLogger->info("User {$currentUser->username} updated details for role {$role->name}.", [
                 'type' => 'role_update_info',
                 'user_id' => $currentUser->id
             ]);
@@ -837,7 +837,7 @@ class RoleController extends SimpleController
             }
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$currentUser->user_name} updated property '$fieldName' for role {$role->name}.", [
+            $this->ci->userActivityLogger->info("User {$currentUser->username} updated property '$fieldName' for role {$role->name}.", [
                 'type' => 'role_update_field',
                 'user_id' => $currentUser->id
             ]);

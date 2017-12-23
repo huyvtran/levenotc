@@ -3,7 +3,7 @@
 {% block modal_title %}{{translate("ROLE.MANAGE")}}{% endblock %}
 
 {% block modal_body %}
-<form class="js-form" method="PUT" action="{{site.uri.public}}/api/users/u/{{user.user_name}}/roles">
+<form class="js-form" method="PUT" action="{{site.uri.public}}/api/users/u/{{user.username}}/roles">
     {% include "forms/csrf.html.twig" %}
     <div class="js-form-alerts">
     </div>

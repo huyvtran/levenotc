@@ -31,13 +31,13 @@ return [
     "DASHBOARD"             => "Панель управления",
     "NO_FEATURES_YET"       => "Похоже, некоторые функции не были настроены для этого аккаунта... пока. Возможно, они еще не реализованы, или, может быть, кто-то забыл дать вам доступ. В любом случае, мы рады вас видеть здесь!",
     "DELETE_MASTER"         => "Нельзя удалить главный аккаунт!",
-    "DELETION_SUCCESSFUL"   => "Пользователь <strong>{{user_name}}</strong> был успешно удален.",
-    "DETAILS_UPDATED"       => "Данные для аккаунта <strong>{{user_name}}</strong> обновлены",
+    "DELETION_SUCCESSFUL"   => "Пользователь <strong>{{username}}</strong> был успешно удален.",
+    "DETAILS_UPDATED"       => "Данные для аккаунта <strong>{{username}}</strong> обновлены",
     "DISABLE_MASTER"        => "Нельзя отключить главный аккаунт!",
     "DISABLE_SELF"          => "Вы не можете отключить собственный аккаунт!",
-    "DISABLE_SUCCESSFUL"    => "Пользователь <strong>{{user_name}}</strong> был успешно отключен.",
+    "DISABLE_SUCCESSFUL"    => "Пользователь <strong>{{username}}</strong> был успешно отключен.",
 
-    "ENABLE_SUCCESSFUL" => "Пользователь <strong>{{user_name}}</strong> был успешно включен.",
+    "ENABLE_SUCCESSFUL" => "Пользователь <strong>{{username}}</strong> был успешно включен.",
 
     "GROUP" => [
         1 => "Группа",
@@ -63,7 +63,7 @@ return [
         "UPDATE"        => "Информация обновлена для группы <strong>{{name}}</strong>"
     ],
 
-    "MANUALLY_ACTIVATED"    => "{{user_name}} аккаунт был активирован вручную",
+    "MANUALLY_ACTIVATED"    => "{{username}} аккаунт был активирован вручную",
     "MASTER_ACCOUNT_EXISTS" => "Мастер-аккаунт уже существует!",
     "MIGRATION" => [
         "REQUIRED"          => "Необходимо обновление базы данных"
@@ -137,7 +137,7 @@ return [
 
         "ACTIVATE"          => "Активировать пользователя",
         "CREATE"            => "Создать пользователя",
-        "CREATED"           => "Пользователь <strong>{{user_name}}</strong> был успешно создан",
+        "CREATED"           => "Пользователь <strong>{{username}}</strong> был успешно создан",
         "DELETE"            => "Удалить пользователя",
         "DELETE_CONFIRM"    => "Вы уверены, что вы хотите удалить пользователя <strong>{{name}}</strong>?",
         "DELETE_YES"        => "Да, удалить пользователя",

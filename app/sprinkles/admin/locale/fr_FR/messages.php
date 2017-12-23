@@ -30,13 +30,13 @@ return [
 
     "DASHBOARD"             => "Tableau de bord",
     "DELETE_MASTER"         => "Vous ne pouvez pas supprimer le compte principal !",
-    "DELETION_SUCCESSFUL"   => "L'utilisateur <strong>{{user_name}}</strong> a été supprimé avec succès.",
-    "DETAILS_UPDATED"       => "Les détails du compte de <strong>{{user_name}}</strong> ont été mis à jour",
+    "DELETION_SUCCESSFUL"   => "L'utilisateur <strong>{{username}}</strong> a été supprimé avec succès.",
+    "DETAILS_UPDATED"       => "Les détails du compte de <strong>{{username}}</strong> ont été mis à jour",
     "DISABLE_MASTER"        => "Vous ne pouvez pas désactiver le compte principal !",
     "DISABLE_SELF"          => "Vous ne pouvez pas désactiver votre propre compte !",
-    "DISABLE_SUCCESSFUL"    => "Le compte de l'utilisateur <strong>{{user_name}}</strong> a été désactivé avec succès.",
+    "DISABLE_SUCCESSFUL"    => "Le compte de l'utilisateur <strong>{{username}}</strong> a été désactivé avec succès.",
 
-    "ENABLE_SUCCESSFUL" => "Le compte de l'utilisateur <strong>{{user_name}}</strong> a été activé avec succès.",
+    "ENABLE_SUCCESSFUL" => "Le compte de l'utilisateur <strong>{{username}}</strong> a été activé avec succès.",
 
     "GROUP" => [
         1 => "Groupe",
@@ -61,7 +61,7 @@ return [
         "UPDATE"           => "Les détails du groupe <strong>{{name}}</strong> ont été enregistrés"
     ],
 
-    "MANUALLY_ACTIVATED"    => "Le compte de {{user_name}} a été activé manuellement",
+    "MANUALLY_ACTIVATED"    => "Le compte de {{username}} a été activé manuellement",
     "MASTER_ACCOUNT_EXISTS" => "Le compte principal existe déjà !",
     "MIGRATION" => [
         "REQUIRED"          => "Mise à jour de la base de données requise"
@@ -127,7 +127,7 @@ return [
 
         "ACTIVATE"          => "Autoriser l'utilisateur",
         "CREATE"            => "Créer un utilisateur",
-        "CREATED"           => "L'utilisateur <strong>{{user_name}}</strong> a été créé avec succès",
+        "CREATED"           => "L'utilisateur <strong>{{username}}</strong> a été créé avec succès",
         "DELETE"            => "Supprimer l'utilisateur",
         "DELETE_CONFIRM"    => "Êtes-vous certain de vouloir supprimer l'utilisateur <strong>{{name}}</strong>?",
         "DELETE_YES"        => "Oui, supprimer l'utilisateur",

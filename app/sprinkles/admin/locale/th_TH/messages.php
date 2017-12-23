@@ -30,12 +30,12 @@ return [
 
     "DASHBOARD"             => "แผงควบคุม",
     "DELETE_MASTER"         => "คุณไม่สามารถลบบัญชีหลักได้!",
-    "DELETION_SUCCESSFUL"   => "ลบผู้ใช้ <strong>{{user_name}}</strong> เรียบร้อยแล้ว",
-    "DETAILS_UPDATED"       => "ปรับปรุงรายระเอียดบัญชีให้กับ <strong>{{user_name}}</strong> แล้ว",
+    "DELETION_SUCCESSFUL"   => "ลบผู้ใช้ <strong>{{username}}</strong> เรียบร้อยแล้ว",
+    "DETAILS_UPDATED"       => "ปรับปรุงรายระเอียดบัญชีให้กับ <strong>{{username}}</strong> แล้ว",
     "DISABLE_MASTER"        => "คุณไม่สามารถปิดการใช้งานบัญชีหลัก!",
-    "DISABLE_SUCCESSFUL"    => "ปิดการใช้งานบัญชีของผู้ใช้ <strong>{{user_name}}</strong> เรียบร้อยแล้ว",
+    "DISABLE_SUCCESSFUL"    => "ปิดการใช้งานบัญชีของผู้ใช้ <strong>{{username}}</strong> เรียบร้อยแล้ว",
 
-    "ENABLE_SUCCESSFUL" => "เปิดการใช้งานบัญชีของผู้ใช้ <strong>{{user_name}}</strong> เรียบร้อยแล้ว",
+    "ENABLE_SUCCESSFUL" => "เปิดการใช้งานบัญชีของผู้ใช้ <strong>{{username}}</strong> เรียบร้อยแล้ว",
 
     "GROUP" => [
         1 => "กลุ่ม",
@@ -55,7 +55,7 @@ return [
         "PAGE_DESCRIPTION" => "รายชื่อกลุ่มในเว็บของคุณ ประกอบไปด้วยเครื่องมือในการจัดการสำหรับการแก้ไขและลบกลุ่ม"
     ],
 
-    "MANUALLY_ACTIVATED"    => "บัญชีของ {{user_name}} ได้เปิดใช้งานเองแล้ว",
+    "MANUALLY_ACTIVATED"    => "บัญชีของ {{username}} ได้เปิดใช้งานเองแล้ว",
     "MASTER_ACCOUNT_EXISTS" => "มีบัญชีหลักอยู่แล้ว!",
     "MIGRATION" => [
         "REQUIRED"          => "ต้องการการปรับปรุงฐานข้อมูล"

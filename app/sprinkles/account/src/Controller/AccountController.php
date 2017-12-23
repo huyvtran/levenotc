@@ -95,7 +95,7 @@ class AccountController extends SimpleController
         // Log throttleable event
         $throttler->logEvent('check_username_request');
 
-        if ($classMapper->staticMethod('user', 'findUnique', $data['user_name'], 'user_name')) {
+        if ($classMapper->staticMethod('user', 'findUnique', $data['username'], 'username')) {
             $message = $translator->translate('USERNAME.NOT_AVAILABLE', $data);
             return $response->write($message)->withStatus(200);
         } else {
@@ -321,14 +321,14 @@ class AccountController extends SimpleController
         }
 
         // Determine whether we are trying to log in with an email address or a username
-        $isEmail = filter_var($data['user_name'], FILTER_VALIDATE_EMAIL);
+        $isEmail = filter_var($data['username'], FILTER_VALIDATE_EMAIL);
 
         // Throttle requests
 
         /** @var UserFrosting\Sprinkle\Core\Throttle\Throttler $throttler */
         $throttler = $this->ci->throttler;
 
-        $userIdentifier = $data['user_name'];
+        $userIdentifier = $data['username'];
 
         $throttleData = [
             'user_identifier' => $userIdentifier
@@ -356,7 +356,7 @@ class AccountController extends SimpleController
         /** @var UserFrosting\Sprinkle\Account\Authenticate\Authenticator $authenticator */
         $authenticator = $this->ci->authenticator;
 
-        $currentUser = $authenticator->attempt(($isEmail ? 'email' : 'user_name'), $userIdentifier, $data['password'], $data['rememberme']);
+        $currentUser = $authenticator->attempt(($isEmail ? 'email' : 'username'), $userIdentifier, $data['password'], $data['rememberme']);
 
         $ms->addMessageTranslated('success', 'WELCOME', $currentUser->export());
 
@@ -667,7 +667,7 @@ class AccountController extends SimpleController
         $currentUser->save();
 
         // Create activity record
-        $this->ci->userActivityLogger->info("User {$currentUser->user_name} updated their profile settings.", [
+        $this->ci->userActivityLogger->info("User {$currentUser->username} updated their profile settings.", [
             'type' => 'update_profile_settings'
         ]);
 
@@ -703,7 +703,7 @@ class AccountController extends SimpleController
         /** @var UserFrosting\Config\Config $config */
         $config = $this->ci->config;
 
-        // Get POST parameters: user_name, first_name, last_name, email, password, passwordc, captcha, spiderbro, csrf_token
+        // Get POST parameters: username, first_name, last_name, email, password, passwordc, captcha, spiderbro, csrf_token
         $params = $request->getParsedBody();
 
         // Check the honeypot. 'spiderbro' is not a real field, it is hidden on the main page and must be submitted with its default value for this to be processed.
@@ -758,7 +758,7 @@ class AccountController extends SimpleController
         }
 
         // Check if username or email already exists
-        if ($classMapper->staticMethod('user', 'findUnique', $data['user_name'], 'user_name')) {
+        if ($classMapper->staticMethod('user', 'findUnique', $data['username'], 'username')) {
             $ms->addMessageTranslated('danger', 'USERNAME.IN_USE', $data);
             $error = true;
         }
@@ -823,7 +823,7 @@ class AccountController extends SimpleController
             $user->save();
 
             // Create activity record
-            $this->ci->userActivityLogger->info("User {$user->user_name} registered for a new account.", [
+            $this->ci->userActivityLogger->info("User {$user->username} registered for a new account.", [
                 'type' => 'sign_up',
                 'user_id' => $user->id
             ]);
@@ -1108,7 +1108,7 @@ class AccountController extends SimpleController
         $currentUser->save();
 
         // Create activity record
-        $this->ci->userActivityLogger->info("User {$currentUser->user_name} updated their account settings.", [
+        $this->ci->userActivityLogger->info("User {$currentUser->username} updated their account settings.", [
             'type' => 'update_account_settings'
         ]);
 
@@ -1136,7 +1136,7 @@ class AccountController extends SimpleController
         // Be careful how you consume this data - it has not been escaped and contains untrusted user-supplied content.
         // For example, if you plan to insert it into an HTML DOM, you must escape it on the client side (or use client-side templating).
         return $response->withJson([
-            'user_name' => $suggestion
+            'username' => $suggestion
         ], 200, JSON_PRETTY_PRINT);
     }
 

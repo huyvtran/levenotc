@@ -1,0 +1,43 @@
+---
+username:
+  validators:
+    length:
+      label: "&USERNAME"
+      min: 1
+      max: 50
+      message: VALIDATE.LENGTH_RANGE
+    no_leading_whitespace:
+      label: "&USERNAME"
+      message: VALIDATE.NO_LEAD_WS
+    no_trailing_whitespace:
+      label: "&USERNAME"
+      message: VALIDATE.NO_TRAIL_WS
+    required:
+      label: "&USERNAME"
+      message: VALIDATE.REQUIRED
+    username:
+      label: "&USERNAME"
+      message: VALIDATE.USERNAME
+
+email:
+  validators:
+    required:
+      label: "&EMAIL"
+      message: VALIDATE.REQUIRED
+    length:
+      label: "&EMAIL"
+      min: 1
+      max: 150
+      message: VALIDATE.LENGTH_RANGE
+    email:
+      message: VALIDATE.INVALID_EMAIL
+password:
+  validators:
+    required:
+      label: "&PASSWORD"
+      message: VALIDATE.REQUIRED
+    length:
+      label: "&PASSWORD"
+      min: 6
+      max: 100
+      message: VALIDATE.LENGTH_RANGE
