@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
- 
+
 /**
  * @property integer $id [TYPE=INTEGER, NULLABLE=0, DEFAULT=""]
  * @property string $coin_type [TYPE=STRING, NULLABLE=0, DEFAULT=""]
