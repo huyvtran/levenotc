@@ -128,8 +128,8 @@
                             {% endif %}
                         </ul>
                     </li>
-                    <li class="hidden-xs"><a href="{{ path('login', {goto:_target_path|navigation(app.request.server.get('REQUEST_URI'))}) }}">{{'homepage.header.login'|trans}}</a></li>
-                    <li class="hidden-xs"><a href="{{ path('register', {goto:_target_path|navigation(app.request.server.get('REQUEST_URI'))}) }}">{{'homepage.header.register'|trans}}</a></li>
+                    <li class="hidden-xs"><a href="{{ path('login', {goto:_target_path|navigation(app.request.server.get('REQUEST_URI'))}) }}">{{'SIGNIN'|trans}}</a></li>
+                    <li class="hidden-xs"><a href="{{ path('register', {goto:_target_path|navigation(app.request.server.get('REQUEST_URI'))}) }}">{{'REGISTER'|trans}}</a></li>
                 {% endif %}
                 {#{% include 'navigation/switch-language.html.twig' %}#}
             </ul>

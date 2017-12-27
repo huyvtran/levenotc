@@ -9,6 +9,7 @@
 namespace UserFrosting\Sprinkle\Api\ServicesProvider;
 
 use App\Service\AuthService;
+use Illuminate\Config\Repository;
 use Monolog\Formatter\JsonFormatter;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
@@ -50,17 +51,32 @@ class ServicesProvider
 
         };
 
-        $container['cache'] = function ( $c) {
+        $container["config1"] = function () {
+            $config = [];
+            $config['constants'] = ['ORDER_STATUS' => [
+                "CREATED" => 0,
+                "PAY" => 1,
+                "RELEASE" => 2,
+                "COMMENT" => 3,
+                "COMPLAINT" => 4,
+                "CANCEL" => 8,
+                "FINISH" => 9,
 
-            $redis = [
-                'schema' => getenv('REDIS_SCHEMA'),
-                'host' => getenv('REDIS_HOST'),
-                'port' => getenv('REDIS_PORT'),
-                // other options
-            ];
-            $connection = new Client($redis);
-            return new  RedisAdapter($connection);
+            ]];
+            return new Repository($config);
         };
+
+//        $container['cache'] = function ( $c) {
+//
+//            $redis = [
+//                'schema' => getenv('REDIS_SCHEMA'),
+//                'host' => getenv('REDIS_HOST'),
+//                'port' => getenv('REDIS_PORT'),
+//                // other options
+//            ];
+//            $connection = new Client($redis);
+//            return new  RedisAdapter($connection);
+//        };
 
         $container['redis'] = function ( $c) {
             $redis = [

@@ -64,5 +64,8 @@
     },
     "tuupola/slim-jwt-auth": {
         "version": "2.3.3"
+    },
+    "yunpian/yunpian-php-sdk": {
+        "version": "1.0.1"
     }
 }

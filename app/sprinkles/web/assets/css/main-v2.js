@@ -1,1 +1,0 @@
-webpackJsonp(["app/css/main-v2"],{"366ac5359ebb02f224bb":function(b,a){}},["366ac5359ebb02f224bb"]);

@@ -10,14 +10,25 @@
  * This route overrides the main `/` route, so that users are taken directly to the registration page.
  */
 $app->get('/', 'UserFrosting\Sprinkle\Web\Controller\HomeController:index')
-    ->setName('index');
-
-
-$app->get('/homepage', 'UserFrosting\Sprinkle\Web\Controller\HomeController:index')
     ->setName('homepage');
 
-$app->get('/my_orders', 'UserFrosting\Sprinkle\Web\Controller\HomeController:index')
-    ->setName('my_orders');
+//$app->get('/trade', 'UserFrosting\Sprinkle\Web\Controller\TradeController:index')
+//    ->setName('trade');
+
+$app->get('/advert/create', 'UserFrosting\Sprinkle\Web\Controller\AdvertController:create')
+    ->setName('advert_create');
+
+$app->group('/trade', function () {
+    $this->get('', 'UserFrosting\Sprinkle\Web\Controller\TradeController:overview');
+//    $this->post('/buy/{coin}', 'UserFrosting\Sprinkle\Web\Controller\TradeController:buy');
+//    $this->post('/sell/{coin}', 'UserFrosting\Sprinkle\Web\Controller\TradeController:sell');
+
+
+
+});
+
+
+
 
 $app->get('/my_coin', 'UserFrosting\Sprinkle\Web\Controller\HomeController:index')
     ->setName('my_coin');

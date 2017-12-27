@@ -7,7 +7,7 @@
 
     return [
         'assets' => [
-            'use_raw' => false
+            'use_raw' => true
         ],
         'cache' => [
             'twig' => false

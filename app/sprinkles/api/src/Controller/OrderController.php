@@ -33,7 +33,7 @@ class OrderController extends Controller
 
     public function getOrder()
     {
-        $params = Request::getParams();
+        $params = \UserFrosting\Sprinkle\Api\Facades\Request::getParams();
         $user = Auth::getUser();
         $order = Order::with('aduser')->where('user_id', $user->id)
             ->where('id', $params["order_id"])
@@ -49,8 +49,8 @@ class OrderController extends Controller
         Log::info('info', $request->getParams());
         $advert = AdvertService::get($request->getParam("advert_id"));
         if (!$advert) {
-            $this->error('广告不存在');
-            return $this->fail($response);
+            return $this->error('广告不存在');
+
         }
         Log::info('Leven:user', [Auth::getUser()]);
 
@@ -98,9 +98,6 @@ class OrderController extends Controller
         Log::info('monitoring_order: ' . $order->id);
         ChatService::setMessage($order, 'CREATED');
         return $this->json($order);
-
-
-
 
 
     }

@@ -3,12 +3,8 @@
 
         "js/main": {
             "scripts": [
-                "build/manifest.js",
-                "build/js/common.js",
-                "build/js/app.js"
 
-
-
+                "static/js/app.js"
 
             ],
             "options": {
@@ -26,9 +22,9 @@
         "css/main": {
             "styles": [
 
-                "css/bootstrap.css",
-                "css/main.css",
-                "css/main-v2.css"
+                "static/css/bootstrap.css",
+                "static/css/main.css",
+                "static/css/main-v2.css"
 
             ],
             "options": {

@@ -82,6 +82,8 @@ class CoreController extends SimpleController
         $config = $this->ci->config;
 
 
+
+
         $assetLoader = $this->ci->assetLoader;
 
         if (!$assetLoader->loadAsset($args['url'])) {

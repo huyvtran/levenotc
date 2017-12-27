@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Controller\Api;
+namespace App\Controller;
 
 use App\Model\User;
-use Cartalyst\Sentinel\Checkpoints\ThrottlingException;
 use Firebase\JWT\JWT;
 use Respect\Validation\Validator as V;
 use Slim\Http\Request;
@@ -31,9 +30,9 @@ class CommonController extends Controller
             $clnt = YunpianClient::create(env("YUNPIAN_API"));
             $param = [YunpianClient::MOBILE => $mobile,YunpianClient::TEXT => '【币赢科技】 您的验证码是 '.$code];
             $r = $clnt->sms()->single_send($param);
-            return $this->setMessage('发送成功')->json($response,[]);
+            return $this->setMessage('发送成功')->json([]);
         }
-        return $this->setMessage('发送成功')->json($response,[]);
+        return $this->setMessage('发送成功')->json([]);
     }
 
 
@@ -52,7 +51,7 @@ class CommonController extends Controller
             $r = $clnt->sms()->single_send($param);
             return $this->setMessage('发送成功')->json($response,[]);
         }
-        return $this->setMessage('发送成功')->json($response,[]);
+        return $this->setMessage('发送成功')->json([]);
     }
 
     public function getprice(Request $request, Response $response){
@@ -62,6 +61,6 @@ class CommonController extends Controller
             "eth_cny"=>4022.33,
 
         ];
-        return $this->setMessage('发送成功')->json($response,$price);
+        return $this->setMessage('发送成功')->json($price);
     }
 }
